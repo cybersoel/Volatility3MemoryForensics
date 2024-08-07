@@ -19,12 +19,15 @@
 ---
 <a name="toc"></a>
 **Table of Contents:**
-- YT DFIRScience, Joshua I. James, Digital Forensic Scientist
-- YT CyDig Cyber Security Digital Forensics Education
+
+-
 
 
 ---
 **Credit to:**
+
+- YT DFIRScience, Joshua I. James, Digital Forensic Scientist
+- YT CyDig Cyber Security Digital Forensics Education
 
 
 
