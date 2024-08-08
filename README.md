@@ -25,8 +25,8 @@
 ---
 **Credit to:**
 
- -YT DFIRScience, Joshua I. James, Digital Forensic Scientist
- -YT CyDig Cyber Security Digital Forensics Education
+- YT DFIRScience, Joshua I. James, Digital Forensic Scientist
+- YT CyDig Cyber Security Digital Forensics Education
 
 
 
