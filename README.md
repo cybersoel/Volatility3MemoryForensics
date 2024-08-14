@@ -644,20 +644,29 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 <img width="597" alt="Portfolio" src="https://i.imgur.com/FdaGKKk.png">
 <br />
 
-(1) is a registry hive offset value
-(2) tells you what user account is being used.
-(3) is the last time that an action took place.
-(4) is the name of a program
-(5) is how many times the program was run
-(6) is a focus count: how many times a user focused on this particular window for the program
-(7) is the total amount of time the user was focusing on the window for the program.
+- (1) is a registry hive offset value
+- (2) tells you what user account is being used.
+- (3) is the last time that an action took place.
+- (4) is the name of a program
+- (5) is how many times the program was run
+- (6) is a focus count: how many times a user focused on this particular window for the program
+- (7) is the total amount of time the user was focusing on the window for the program.
+
+<br />
+<br />
+
+So, according to the information we have, we can say, the last time the user John Doe ran PowerShell was 2021-04-30 17:52:18; the user John Doe ran PowerShell a total of 9 times, and went away from the PowerShell window and came back to it 31 times. The total amount of time he spent on PowerShell is about 16 mins.
 
 
 
 
+<br />
+<br />
+<br />
+<br />
 
 
-51
+ - Like any other plugins, we can use the `Select-String` PowerShell cmdlet to narrow down search results.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/lOJIIsS.png">
@@ -675,21 +684,20 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 
 
 
-52
+ - If we want to get all of the registry files that are available in the system (in order to carve them out) `py vol.py -f "C:<FilePath>\20240712.mem" windows.registry.hivelist` will print out all the registry files that are available in the system.
+ - Let's take a look at which options we can use for this particular plugin.
+ - Run: `py vol.py -f "C:<FilePath>\20240712.mem" windows.registry.hivelist -h`
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/YQiJfFt.png">
 <br />
-<br />
-<br />
-<br />
+
+We can see there's a string filtering option we can use (that means we don't need to use the PowerShell cmdlet Select-String). We also have the `--dump` option for extracting the registry hive files.
 
 
 
 
-
-
-53
+ - Let's say we are interested in the user John Doe, and also want to see the file "ntuser.dat"
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/Txrr6No.png">
@@ -700,10 +708,7 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 
 
 
-
-
-
-54
+ - We can use the `--filter` option with the string "John Doe\ntuser.dat"
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/qUmdKC4.png">
@@ -713,11 +718,8 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 <br />
 
 
-
-
-
-
-55
+ - We can add the `--dump` option to extract this particular file to the folder "dump"
+ - Run: `py vol.py -f "C:<FilePath>\20240712.mem" -o "dump" windows.registry.hivelist --filter "John Doe/ntuser.dat" --dump`
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/bTbgvua.png">
@@ -727,11 +729,7 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 <br />
 
 
-
-
-
-
-56
+ - Check the file to see if it is dumped correctly.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/lqq8Kcs.png">
@@ -749,8 +747,7 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 <br />
 
 
-
-57
+ - Let's say we have one specific key we want to check instead of dumping the entire registry file. We can use the `windows.registry.printkey` plugin.
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/YqEOXi0.png">
@@ -760,11 +757,8 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 <br />
 
 
-
-
-
-
-58
+ - We can use the `--key` option with the value we want to search.
+ - An example would be: `py vol.py -f "C:<FilePath>\20240712.mem" windows.registry.printkey --key "Software\Microsoft\Windows\CurrentVersion" | more`
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/gNUKYdj.png">
@@ -774,11 +768,7 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 <br />
 
 
-
-
-
-
-59
+ - We can see all of the keys inside "CurrentVersion" (If we want to also see subkey values, we can simply add the `--recurse` option.)
 <p align="center">
 <br/>
 <img width="597" alt="Portfolio" src="https://i.imgur.com/VReZRFn.png">
