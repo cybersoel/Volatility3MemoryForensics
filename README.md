@@ -20,7 +20,21 @@
 <a name="toc"></a>
 **Table of Contents:**
 
-- 
+
+- [Introduction](#introduction)
+- [Installation and Setup](#installation-and-setup)
+- [Memory Acquisition ](#memory-acquisition)
+- [Basic Volatility 3 Usage](#basic-volatility-3-usage)
+- [Analyzing Processes](#analyzing-processes)
+- [Investigating File Handles](#investigating-file-handles)
+- [Examining Command Line Usage](#examining-command-line-usage)
+- [Network Activity Analysis](#network-activity-analysis)
+- [Password Hash Extraction](#password-hash-extraction)
+- [Registry UserAssist Analysis](#registry-userassist-analysis)
+- [Registry Hive Examination](#registry-hive-examination)
+- [Specific Registry Key Analysis](#specific-registry-key-analysis)
+
+
 
 ---
 **Credit to:**
@@ -36,6 +50,8 @@
 <h4>Tip: Any configuration options not mentioned in the walkthrough can be left at their default settings</h4>
 
 ---
+
+[back to top](#toc)
 ## Introduction
 
 <br/>
@@ -47,6 +63,8 @@ In this lab, we will dive into Volatility 3 using some basic features to underst
 
 
 ---
+
+[back to top](#toc)
 ## Installation and Setup 
 
 <br />
@@ -186,6 +204,8 @@ In this lab, we will dive into Volatility 3 using some basic features to underst
 
 
 ---
+
+[back to top](#toc)
 ## Memory Acquisition
 
 <br />
@@ -224,6 +244,8 @@ In this lab, we will dive into Volatility 3 using some basic features to underst
 
 
 ---
+
+[back to top](#toc)
 ## Basic Volatility 3 Usage
 
 <br />
@@ -314,6 +336,8 @@ In this lab, we will dive into Volatility 3 using some basic features to underst
 
 
 ---
+
+[back to top](#toc)
 ## Analyzing Processes
 
 <br />
@@ -368,6 +392,8 @@ Using PPID and PID, we can reconstruct how applications were opened and where th
 
 
 ---
+
+[back to top](#toc)
 ## Investigating File Handles 
 
 <br />
@@ -492,6 +518,8 @@ Using PPID and PID, we can reconstruct how applications were opened and where th
 
 
 ---
+
+[back to top](#toc)
 ## Examining Command Line Usage
 
 <br />
@@ -536,6 +564,8 @@ Using PPID and PID, we can reconstruct how applications were opened and where th
 
 
 ---
+
+[back to top](#toc)
 ## Network Activity Analysis
 
 <br />
@@ -601,6 +631,8 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 
 
 ---
+
+[back to top](#toc)
 ## Password Hash Extraction
 
 <br />
@@ -630,6 +662,8 @@ The list shows 1 - offset in the memory image, 2 - protocol that was used (e.g.,
 
 
 ---
+
+[back to top](#toc)
 ## Registry UserAssist Analysis
 
 <br />
@@ -677,6 +711,8 @@ So, according to the information we have, we can say, the last time the user Joh
 
 
 ---
+
+[back to top](#toc)
 ## Registry Hive Examination
 
 <br />
@@ -741,6 +777,8 @@ We can see there's a string filtering option we can use (that means we don't nee
 
 
 ---
+
+[back to top](#toc)
 ## Specific Registry Key Analysis
 
 <br />
