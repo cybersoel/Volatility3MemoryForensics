@@ -36,10 +36,21 @@
 <h4>Tip: Any configuration options not mentioned in the walkthrough can be left at their default settings</h4>
 
 ---
+## Introduction
 
+<br/>
+
+In this lab, we will dive into Volatility 3 using some basic features to understand the program. We will use various filters to extract information that might help us to reconstruct user activity.
+
+
+<br/>
 
 
 ---
+## Installation and Setup 
+
+<br />
+<br />
 
 
 1
@@ -185,6 +196,14 @@
 <br />
 
 
+---
+## Memory Acquisition
+
+<br />
+<br />
+
+
+
 14
 <p align="center">
 <br/>
@@ -214,6 +233,13 @@
 <img width="597" alt="Portfolio" src="https://i.imgur.com/Lve8GSm.png">
 <br />
 <br />
+<br />
+<br />
+
+
+---
+## Basic Volatility 3 Usage
+
 <br />
 <br />
 
@@ -315,7 +341,11 @@
 
 
 
+---
+## Analyzing Processes
 
+<br />
+<br />
 
 
 25
@@ -370,7 +400,11 @@
 <br />
 
 
+---
+## Investigating File Handles 
 
+<br />
+<br />
 
 
 
@@ -524,7 +558,11 @@
 <br />
 
 
+---
+## Examining Command Line Usage
 
+<br />
+<br />
 
 
 
@@ -566,6 +604,12 @@
 <br />
 
 
+
+---
+## Network Activity Analysis
+
+<br />
+<br />
 
 
 
@@ -636,6 +680,11 @@
 <br />
 
 
+---
+## Password Hash Extraction
+
+<br />
+<br />
 
 
 
@@ -664,7 +713,11 @@
 <br />
 
 
+---
+## Registry UserAssist Analysis
 
+<br />
+<br />
 
 
 
@@ -692,7 +745,11 @@
 <br />
 
 
+---
+## Registry Hive Examination
 
+<br />
+<br />
 
 
 
@@ -763,6 +820,11 @@
 
 
 
+---
+## Specific Registry Key Analysis
+
+<br />
+<br />
 
 
 
